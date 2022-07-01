@@ -1,14 +1,3 @@
-<style>
-a {
-decoration: none;
-color: gold;
-}
-</style>
-
-<div style="margin-bottom: 20px;">
-<a href="../README.md" style="color: gold; text-decoration: none; padding: 10px; border: 1px solid gold; margin-right: 10px">Home</a>
-</div>
-
 # Basic
 
 html5.2 dokumentacja opublikowana w 2017 r.

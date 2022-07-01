@@ -1,10 +1,3 @@
-<style>
-a {
-decoration: none;
-color: gold;
-}
-</style>
-
 # big-html-revision
 BIG HTML standard markup language repetition
 
