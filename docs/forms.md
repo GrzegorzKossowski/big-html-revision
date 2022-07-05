@@ -5,7 +5,9 @@
 Formularze służą pobieraniu danych od klienta. Służy do tego element `<form>`.
 
 ```html
-<form>// form elements</form>
+<form>
+    <!-- form elements -->
+</form>
 ```
 
 `<input>` - element generyczny, zależny od typu podanego w atrybucie.
@@ -98,7 +100,7 @@ Formularze służą pobieraniu danych od klienta. Służy do tego element `<form
 </form>
 ```
 
-<span style='color:red'>Atrybut name jest wymagany. Jego wartość jest przesyłana przez formularz.</span>
+<span style='color:#ff6d6d'>Atrybut `name` jest wymagany. Jego wartość jest przesyłana przez formularz.</span>
 
 # Form Attributes
 
@@ -286,7 +288,9 @@ Formularz może zawierać nastepujące elementy:
 
 `<input type="week">`
 
-Niektóre restrykcje dotyczące inputów:
+# Input Attributes
+
+Każdy input przyjmuje pewne atrybuty.
 
 `checked` - ustawia stan radiobuttona lub checkboxa
 
@@ -300,6 +304,8 @@ Niektóre restrykcje dotyczące inputów:
 
 `pattern` - ustawia regex do validowania pola
 
+`placeholder` - wyświetla tekst w pustym inpucie
+
 `readonly` - ustawia czy pole może być zmienione
 
 `required` - ustawia, czy pole jest wymagane do działania formularza
@@ -310,13 +316,50 @@ Niektóre restrykcje dotyczące inputów:
 
 `value` - ustawia defaultową wartość pola
 
-# Input Attributes
-
-...
+`value` - ustawia początkową wartość inputa
 
 # Input Form Attributes
 
-...
+Atrybuty formularza.
 
-<a href='../README.md' style='border: 1px solid gold; padding: 5px; color: gold'>← back to README.md</a>
-<a href='#top' style='border: 1px solid gold; padding: 5px; color: gold'>↑ back to top</a>
+`form` - pozwala na przypisanie elementów poza formularzem, które należą do niego na podstawie id formy.
+
+```html
+<form action="/action_page.php" id="form1">
+  <label for="fname">First name:</label>
+  <input type="text" id="fname" name="fname"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+<label for="lname">Last name:</label>
+<input type="text" id="lname" name="lname" form="form1">
+```
+`formaction` w submicie ustawia akcję, która nadpisuje akcję formy. Pozwala to na wykorzystanie kilku buttonów do różnych akcji?
+
+```html
+  <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+```
+
+`formenctype` - ustala jak mają być wysyłane dane
+```html
+<input type="submit" formenctype="multipart/form-data"
+  value="Submit as Multipart/form-data">
+```
+
+`formmethod` w inpucie nadpisuje sposób wysłania (GET, POST)
+
+`formtarget` w inpucie nadpisuje target do wyświetlenia responsu (_blank, itp.)
+
+`formnovalidate` wyłącza walidację z zpoziomu inputa
+
+`novalidate` wyłącza walidację z poziomu formy
+
+
+
+
+
+
+
+<a href="../README.md" style="border: 1px solid gold; padding: 5px; color: gold">← back to README.md</a>
+
+<a href="#top" style="border: 1px solid gold; padding: 5px; color: gold"> ↑ back to top</a>
